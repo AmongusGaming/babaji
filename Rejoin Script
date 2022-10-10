@@ -51,6 +51,59 @@
 
 
 
+--just makes you rejoin the game
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- This file has been generated using Luraph Obfuscation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 local function getsynassetfromurl(URL)
     local getsynasset, request = getsynasset or getcustomasset or error('invalid attempt to \'getsynassetfromurl\' (custom asset retrieval function expected)'), (syn and syn.request) or (http and http.request) or (request) or error('invalid attempt to \'getsynassetfromurl\' (http request function expected)')
     local Extension, Types, URL = '', {'.png', '.webm'}, assert(tostring(type(URL)) == 'string', 'invalid argument #1 to \'getsynassetfromurl\' (string [URL] expected, got '..tostring(type(URL))..')') and URL or nil
@@ -169,10 +222,21 @@ syn.request(
 
 while true do
 wait(0.000000000000000000000000001)    
-rconsolename('T̛̺̫̳͐̈h͔̖̉̊a̗͉̋͒t̞͘ ͕̻̣̋̎̕w͙̦̻̓̑̓͗͢a̭͂sñ͕̦͋'̡̲̿̿t̛̘͎͔͐͛̊ͅ ̯͍̙͆̐̒t̤̖̒̀h̦̾̀͢è̱̲̙̈̍͐͜ ̼͘r̜̆i̢̟̖̠̟͂́̆̐̋g̡͔̥͍̎̑̾͌h̙̩̓̔t̢͉̆̂ ͔̖̳́̎͌̍ͅẗ͇́̇͜h̯̼̒͂̑͢ị͓̰̓̾́n̢̬̰͊̋͋g̞̰͂͠ ̻̹̱̉̑̐̋͜t̙̂ô̘̱̚ ̘̻̹̍̚͘͘͢d̻͓̂͋ơ̠͉͋.̫̍͐͟')
+rconsolename('  C̢̢͕͚̀͒̚̚O͎͉̹̹͊̈́̒͞R̟̥̦̈̃̿R̖͙̰̹̓̈́͐͂Ṳ̩͚̓͌̌̋̍͟ͅP͙̏T̡̛̺̝͇̒̔̋I̦͝ON̪̄̅̅͢ͅ  ')
 rconsoleprint('@@RED@@')
 rconsoleprint(' C͇̣̅̔͛͢Ọ̠͎͆͋͌̕͢Ṝ͎͘R͈̰͛̌U̥̟̅̄͗̂͟ͅṔ̭TỊ͠Ô̪N̫͘ ')
 end
+
+
+
+
+
+
+
+
+
+
+
 
 
 
