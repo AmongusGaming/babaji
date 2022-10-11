@@ -1,17 +1,16 @@
-Black	@@BLACK@@
-Blue	@@BLUE@@
-Green	@@GREEN@@
-Cyan	@@CYAN@@
-Red	@@RED@@
-Magenta	@@MAGENTA@@
-Brown	@@BROWN@@
-Light Gray	@@LIGHT_GRAY@@ 
-Color	Code
-Dark Gray	@@DARK_GRAY@@
-Light Blue	@@LIGHT_BLUE@@
-Light Green	@@LIGHT_GREEN@@
-Light Cyan	@@LIGHT_CYAN@@
-Light Red	@@LIGHT_RED@@
-Light Magenta	@@LIGHT_MAGENTA@@
-Yellow	@@YELLOW@@
-White	@@WHITE@@
+print("rconsoleprint colors")
+print("@@BLACK@@")
+print("@@BLUE@@")
+print("@@GREEN@@")
+print("@@CYAN@@")
+print("@@RED@@")
+print("@@MAGENTA@@")
+print("@@BROWN@@")
+print("@@LIGHT_GRAY@@")
+print("@@DARK_GRAY@@")
+print("@@LIGHT_BLUE@@")
+print("@@LIGHT_GREEN@@")
+print("@@LIGHT_CYAN@@")
+print("@@LIGHT_RED@@")
+print("@@LIGHT_MAGENTA@@")
+print("@@WHITE@@")
