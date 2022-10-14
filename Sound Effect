@@ -1,0 +1,23 @@
+local Sound = Instance.new("Sound", workspace)
+Sound.SoundId = "rbxassetid://5567523008"
+Sound:Play()
+
+local Sound = Instance.new("Sound", workspace)
+Sound.SoundId = "rbxassetid://5567523008"
+Sound:Play()
+
+local Sound = Instance.new("Sound", workspace)
+Sound.SoundId = "rbxassetid://5567523008"
+Sound:Play()
+
+local Sound2 = Instance.new("Sound", workspace)
+Sound2.SoundId = "rbxassetid://5351101493"
+Sound2:Play()
+
+local Sound2 = Instance.new("Sound", workspace)
+Sound2.SoundId = "rbxassetid://5351101493"
+Sound2:Play()
+
+local Sound2 = Instance.new("Sound", workspace)
+Sound2.SoundId = "rbxassetid://5351101493"
+Sound2:Play()
