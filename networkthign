@@ -1,0 +1,1 @@
+workspace.FilteringEnabled = game:GetService("NetworkServer")
